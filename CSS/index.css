@@ -1,0 +1,19 @@
+.header{
+    width: 100vw;
+    height: 100vh;
+}
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+.content{
+    width: 50vw;
+    height: 40vh;
+    background-color: rgba(127, 255, 212,0.9);
+    border-radius: 2vw;
+}
