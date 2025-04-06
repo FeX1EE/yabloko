@@ -2,8 +2,21 @@ html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: xx-large;
 }
+h6{
+    margin: 0;
+    padding: 0;
+}
 p{
+    margin: 0;
+    padding: 0;
     font-size: large;
+}
+li{
+    list-style-type: none;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: medium;
 }
 .header{
     width: 100vw;
@@ -27,6 +40,37 @@ p{
     justify-content: center;
     align-items: center;
     border: 10px solid rgb(233, 62, 32);
-    background-color: rgba(231, 72, 44, 0.9);
+    background-color: rgba(231, 72, 44, 0.4);
     border-radius: 2vw;
+}
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.card{
+    margin: 0;
+    padding: 0;
+    gap: 2vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.person{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+}
+.personImg{
+    width: 2em;
+    height: 2em;
+}
+.features-list{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
 }
