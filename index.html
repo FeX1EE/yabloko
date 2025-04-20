@@ -1,70 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/index.css">
+    <script src="JS/index.js" defer></script>
+    <script src="Libs\gsap.min.js"></script>
+    <script src="Libs\ScrollSmoother.min.js"></script>
+    <script src="Libs\ScrollTrigger.min.js"></script>
     <title>X34ETA</title>
 </head>
+
 <body>
-    <header>
-        <div class="background" style="background-image: url(images/img1.jpg);">
-            <div class="content">
-                <h1>WAR THUNDER</h1>
-                <p>War Thunder is a cross-platform military online game dedicated to combat aircraft, ground vehicles and naval forces.</p>
-            </div>
+    <div class="wrapper">
+        <div class="wrapper_content">
+            <header class="hero">
+                <div class="layers">
+                    <div class="layers_container">
+                        <div class="background " style="background-image: url(images/img1.jpg);">
+                        </div>
+                        <div class="head-text layers_item">
+                            <div class="content">
+                                <h1>WAR THUNDER</h1>
+                                <p>War Thunder is a cross-platform military online game dedicated to combat aircraft,
+                                    ground
+                                    vehicles and naval forces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section class="about">
+                    <h2 class="padText">Fight with various military vehicles</h2>
+                    <hr class="secLine">
+                    <p class="padText">War Thunder is a PvP action tank and aircraft shooter with more than thousand
+                        models of technics where you can lose for free and pay to win(or lose if you are really
+                        unskilled). Game is famous for it's unrealistic damage model and technics clones.</p>
+                    <img class="gameImg"
+                        src="https://external-preview.redd.it/anyone-have-any-idea-what-might-cause-these-weird-mini-v0-emQ3cmJzY3piMTJjMfPrx6xdMOTTSrkuxyDPZIhg1rz-xxEEYy-2u8R83tYP.png?format=pjpg&auto=webp&s=378b2233e19ce32f16ac96cae3623dd22d7ef05e">
+                </section>
+                <section class="comments">
+                    <h3 class="padText">Comments</h3>
+                    <hr class="secLine">
+                    <div class="cards-container">
+                        <div class="card">
+                            <div class="person">
+                                <img class="personImg"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAMFBMVEXk5ueutLeor7La3d/n6erh4+SrsbXT1ti7wMPq7O2zubzKztDHy83Bxsi4vcDd4OHJo5BXAAAFEElEQVR4nO2cXZucIAxGUQIoCv7/f1t02t35XoHXSdxyrtq9mvMAgUSIUo1Go9FoNBqNRqPRaDQajUaj0Wg0Go2GbIj7ByCghFk2jFn/w/2Dikke2k1zGDZCmCenzTl9yLh5iN5e4+MQ3Ol8aNQh+s7a7o5NyJ1Jh0a3mtyL/PPpungenVH7Fx7fRD2eQYeW4dWYXNMPywls3Mv5dTfb+on7p/4ALaHfpXKCwSHt97skm07LtaG9U+xrqnWO+ze/ZMoyuehIXTgFLgmZNmUuIm2o1EWgTVr75ThZMS3F5Lw4doMXtt9k7JWP9AP3z7/B1bgkG0nLRleprDZyJhrFigWzYaMUGaqcZNvQSIloVK2S8NwWF2iqnWQbk4yhQaikoTHcHgo2MDKGhn6uXuzCRm6TykPZLfwBjQaUiw3sMiaiZLqomV2As4x/nlEAxbKEnXldlNlVvtwpMyysLrSjrLwfz1tGq8j8n8G7aGDb/wZzEc0A1/+607Cez/Z9vtgtwxoBSFfnmDdEzgiADWYJVhmHlbGc4Qx6mOmYKwHkoEuGWwbqkmT4XA4YmV8l09YMSuZXhebftGlWfWN6hDehwR40u8iaaoJTgIG3RIuVmVll0Jkmb9qMDWfMhTONK2gy52ZqLTUD62a8JYAkM8NcuJcMNnH23LVmpXCfNJh3GQWdZzP7wNCCcmGuNF9sUPOM/8PZGgJAwZl/+av15gzExUtwSXlA/dWZFMsErJiVEXEKiCO3xj8At5q4Fb6gqdbGTmIGRqnKUoAVsvov1J7QuK8z3FJXdJZ033SlohhgA/ePv6e86MR9l+EZS+HnTRvlXAP+ZikKAlba3fkLZEpc5L7UypfxRqqLotzNM0p+SUsh4wmdFZGPvYHc7uzGRhHp2DtomXcNThoWkWHsHjc8Pp2/V7GD3BeaN5BxQ/9Ox/aDkxvF7kk6oX/hY3sbNHu5L5PFxUcf2/dxkncU2wEpF5JQ/7eBRvpXF040vR6gcVTaTStOm/EU3RneQpSUxnP3nFHKrCxXbH8w6jxe6y9NCtpd2udE/9V5xvu4ttKZnNN6ka+09TJKFmGI23p/1namX//uY1gX0SLViLZmRnOI3j6ReCbV+SEN06LE+RAlkWGbUj953Ch16xhpST40LlMSyeyfcSPklIiKJo1m8s+6MuUIpYwzOPZNiEYN+0DrZ8PpQ2buEN9m/pIO03zVDZNOxjiVi07kSXP0+5yllN67D+cHpHQ4RGXTie6jSYLel+eXknLqT9UHSM/Ya6ZPbLrPlAhITdgHQK90wvGRbdTx0Bl2peOnY085RIfPsCub7tCPHbQgLzHu0TnuOl12LzaATjimbS2pGbzf76E/5hJqTutCIEd02iMdWVy6Axo5kftcFHu0maELh2Hp39ggwwCzCzSowd8vMdoIcIHZoJ9iFQLpFkKl10jQIF4KmIFrf7kH8O6R4wzzHFt9JR38RLaKyg6VVN2GEUpf9fQB+W4JQV8x0eqv+KKpuWUra1y69QRdagO5Fo+msD4Ie0uCxA5lH3LGz1Yv9lK0daKbfYAo61Jb3x33GEoeQIo4+D+j6H469HE8koIjGvQFNpbsvQbcHw9J/ktbbD8JMJkhgATPsuyqILrVD5TsvgHizsvXZMYzZONSPHnVAHivPyx5i0bkgfmbzEUD6PR/IJk7DbQ3Dp6YIyN6y1zJyTfN0Msm68WtFs7ZHkY0Go1Go9Fo/H/8AVoJTYWJQwYkAAAAAElFTkSuQmCC"
+                                    alt="">
+                                <h6>Yade Bill</h6>
+                            </div>
+                            <p>nice game! deer developer, kys pls.</p>
+                        </div>
+                        <div class="card">
+                            <div class="person">
+                                <img class="personImg"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAMFBMVEXk5ueutLeor7La3d/n6erh4+SrsbXT1ti7wMPq7O2zubzKztDHy83Bxsi4vcDd4OHJo5BXAAAFEElEQVR4nO2cXZucIAxGUQIoCv7/f1t02t35XoHXSdxyrtq9mvMAgUSIUo1Go9FoNBqNRqPRaDQajUaj0Wg0Go2GbIj7ByCghFk2jFn/w/2Dikke2k1zGDZCmCenzTl9yLh5iN5e4+MQ3Ol8aNQh+s7a7o5NyJ1Jh0a3mtyL/PPpungenVH7Fx7fRD2eQYeW4dWYXNMPywls3Mv5dTfb+on7p/4ALaHfpXKCwSHt97skm07LtaG9U+xrqnWO+ze/ZMoyuehIXTgFLgmZNmUuIm2o1EWgTVr75ThZMS3F5Lw4doMXtt9k7JWP9AP3z7/B1bgkG0nLRleprDZyJhrFigWzYaMUGaqcZNvQSIloVK2S8NwWF2iqnWQbk4yhQaikoTHcHgo2MDKGhn6uXuzCRm6TykPZLfwBjQaUiw3sMiaiZLqomV2As4x/nlEAxbKEnXldlNlVvtwpMyysLrSjrLwfz1tGq8j8n8G7aGDb/wZzEc0A1/+607Cez/Z9vtgtwxoBSFfnmDdEzgiADWYJVhmHlbGc4Qx6mOmYKwHkoEuGWwbqkmT4XA4YmV8l09YMSuZXhebftGlWfWN6hDehwR40u8iaaoJTgIG3RIuVmVll0Jkmb9qMDWfMhTONK2gy52ZqLTUD62a8JYAkM8NcuJcMNnH23LVmpXCfNJh3GQWdZzP7wNCCcmGuNF9sUPOM/8PZGgJAwZl/+av15gzExUtwSXlA/dWZFMsErJiVEXEKiCO3xj8At5q4Fb6gqdbGTmIGRqnKUoAVsvov1J7QuK8z3FJXdJZ033SlohhgA/ePv6e86MR9l+EZS+HnTRvlXAP+ZikKAlba3fkLZEpc5L7UypfxRqqLotzNM0p+SUsh4wmdFZGPvYHc7uzGRhHp2DtomXcNThoWkWHsHjc8Pp2/V7GD3BeaN5BxQ/9Ox/aDkxvF7kk6oX/hY3sbNHu5L5PFxUcf2/dxkncU2wEpF5JQ/7eBRvpXF040vR6gcVTaTStOm/EU3RneQpSUxnP3nFHKrCxXbH8w6jxe6y9NCtpd2udE/9V5xvu4ttKZnNN6ka+09TJKFmGI23p/1namX//uY1gX0SLViLZmRnOI3j6ReCbV+SEN06LE+RAlkWGbUj953Ch16xhpST40LlMSyeyfcSPklIiKJo1m8s+6MuUIpYwzOPZNiEYN+0DrZ8PpQ2buEN9m/pIO03zVDZNOxjiVi07kSXP0+5yllN67D+cHpHQ4RGXTie6jSYLel+eXknLqT9UHSM/Ya6ZPbLrPlAhITdgHQK90wvGRbdTx0Bl2peOnY085RIfPsCub7tCPHbQgLzHu0TnuOl12LzaATjimbS2pGbzf76E/5hJqTutCIEd02iMdWVy6Axo5kftcFHu0maELh2Hp39ggwwCzCzSowd8vMdoIcIHZoJ9iFQLpFkKl10jQIF4KmIFrf7kH8O6R4wzzHFt9JR38RLaKyg6VVN2GEUpf9fQB+W4JQV8x0eqv+KKpuWUra1y69QRdagO5Fo+msD4Ie0uCxA5lH3LGz1Yv9lK0daKbfYAo61Jb3x33GEoeQIo4+D+j6H469HE8koIjGvQFNpbsvQbcHw9J/ktbbD8JMJkhgATPsuyqILrVD5TsvgHizsvXZMYzZONSPHnVAHivPyx5i0bkgfmbzEUD6PR/IJk7DbQ3Dp6YIyN6y1zJyTfN0Msm68WtFs7ZHkY0Go1Go9Fo/H/8AVoJTYWJQwYkAAAAAElFTkSuQmCC"
+                                    alt="">
+                                <h6>Dege Nerat</h6>
+                            </div>
+                            <p>I've grinded soviets for 10 years and finally unlocked 7th rank.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="features">
+                    <h3 class="padText">Features</h3>
+                    <hr class="secLine">
+                    <ul class="features-list">
+                        <li>Unrealistic damage model</li>
+                        <li>In-game vehicle museum with more than thousand models of technics</li>
+                        <li>Ancient graphics from 2012</li>
+                        <li>Unprofessional map design</li>
+                        <li>Lack of diverse updates</li>
+                    </ul>
+                </section>
+            </main>
+            <footer>
+                <div class="contacts">
+                    <h3 class="padText">Contacts</h3>
+                    <hr class="secLine">
+                    <p class="listborder">pu-pu-pu</p>
+                    <p class="listborder">ta-ta-ta</p>
+                </div>
+                <div class="links">
+                    <h3 class="padText">Social links:</h3>
+                    <hr class="secLine">
+                    <div class="listborder">
+                        <img class="logoImg"
+                            src="data:image/png;base64,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">
+                        <a class="linkText" href="">Odnoklasniki</a>
+                    </div>
+                    <div class="listborder">
+                        <img class="logoImg"
+                            src="data:image/png;base64,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">
+                        <a class="linkText" href="">Spherum</a>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </header>
-    <main>
-        <section class="about">
-            <h2 class="padText">Fight with various military vehicles</h2>
-            <hr class="secLine">
-            <p class="padText">War Thunder is a PvP action tank and aircraft shooter within more than thousand models of technics where you can lose for free and pay to win(or lose if you are unskilled)</p>
-            <img class="gameImg" src="https://external-preview.redd.it/anyone-have-any-idea-what-might-cause-these-weird-mini-v0-emQ3cmJzY3piMTJjMfPrx6xdMOTTSrkuxyDPZIhg1rz-xxEEYy-2u8R83tYP.png?format=pjpg&auto=webp&s=378b2233e19ce32f16ac96cae3623dd22d7ef05e">
-        </section>
-        <section class="comments">
-            <h3 class="padText">Comments</h3>
-            <hr class="secLine">
-            <div class="cards-container">
-                <div class="card">
-                    <div class="person">
-                        <img class="personImg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAMFBMVEXk5ueutLeor7La3d/n6erh4+SrsbXT1ti7wMPq7O2zubzKztDHy83Bxsi4vcDd4OHJo5BXAAAFEElEQVR4nO2cXZucIAxGUQIoCv7/f1t02t35XoHXSdxyrtq9mvMAgUSIUo1Go9FoNBqNRqPRaDQajUaj0Wg0Go2GbIj7ByCghFk2jFn/w/2Dikke2k1zGDZCmCenzTl9yLh5iN5e4+MQ3Ol8aNQh+s7a7o5NyJ1Jh0a3mtyL/PPpungenVH7Fx7fRD2eQYeW4dWYXNMPywls3Mv5dTfb+on7p/4ALaHfpXKCwSHt97skm07LtaG9U+xrqnWO+ze/ZMoyuehIXTgFLgmZNmUuIm2o1EWgTVr75ThZMS3F5Lw4doMXtt9k7JWP9AP3z7/B1bgkG0nLRleprDZyJhrFigWzYaMUGaqcZNvQSIloVK2S8NwWF2iqnWQbk4yhQaikoTHcHgo2MDKGhn6uXuzCRm6TykPZLfwBjQaUiw3sMiaiZLqomV2As4x/nlEAxbKEnXldlNlVvtwpMyysLrSjrLwfz1tGq8j8n8G7aGDb/wZzEc0A1/+607Cez/Z9vtgtwxoBSFfnmDdEzgiADWYJVhmHlbGc4Qx6mOmYKwHkoEuGWwbqkmT4XA4YmV8l09YMSuZXhebftGlWfWN6hDehwR40u8iaaoJTgIG3RIuVmVll0Jkmb9qMDWfMhTONK2gy52ZqLTUD62a8JYAkM8NcuJcMNnH23LVmpXCfNJh3GQWdZzP7wNCCcmGuNF9sUPOM/8PZGgJAwZl/+av15gzExUtwSXlA/dWZFMsErJiVEXEKiCO3xj8At5q4Fb6gqdbGTmIGRqnKUoAVsvov1J7QuK8z3FJXdJZ033SlohhgA/ePv6e86MR9l+EZS+HnTRvlXAP+ZikKAlba3fkLZEpc5L7UypfxRqqLotzNM0p+SUsh4wmdFZGPvYHc7uzGRhHp2DtomXcNThoWkWHsHjc8Pp2/V7GD3BeaN5BxQ/9Ox/aDkxvF7kk6oX/hY3sbNHu5L5PFxUcf2/dxkncU2wEpF5JQ/7eBRvpXF040vR6gcVTaTStOm/EU3RneQpSUxnP3nFHKrCxXbH8w6jxe6y9NCtpd2udE/9V5xvu4ttKZnNN6ka+09TJKFmGI23p/1namX//uY1gX0SLViLZmRnOI3j6ReCbV+SEN06LE+RAlkWGbUj953Ch16xhpST40LlMSyeyfcSPklIiKJo1m8s+6MuUIpYwzOPZNiEYN+0DrZ8PpQ2buEN9m/pIO03zVDZNOxjiVi07kSXP0+5yllN67D+cHpHQ4RGXTie6jSYLel+eXknLqT9UHSM/Ya6ZPbLrPlAhITdgHQK90wvGRbdTx0Bl2peOnY085RIfPsCub7tCPHbQgLzHu0TnuOl12LzaATjimbS2pGbzf76E/5hJqTutCIEd02iMdWVy6Axo5kftcFHu0maELh2Hp39ggwwCzCzSowd8vMdoIcIHZoJ9iFQLpFkKl10jQIF4KmIFrf7kH8O6R4wzzHFt9JR38RLaKyg6VVN2GEUpf9fQB+W4JQV8x0eqv+KKpuWUra1y69QRdagO5Fo+msD4Ie0uCxA5lH3LGz1Yv9lK0daKbfYAo61Jb3x33GEoeQIo4+D+j6H469HE8koIjGvQFNpbsvQbcHw9J/ktbbD8JMJkhgATPsuyqILrVD5TsvgHizsvXZMYzZONSPHnVAHivPyx5i0bkgfmbzEUD6PR/IJk7DbQ3Dp6YIyN6y1zJyTfN0Msm68WtFs7ZHkY0Go1Go9Fo/H/8AVoJTYWJQwYkAAAAAElFTkSuQmCC" alt="">
-                        <h6>Yade Bill</h6>
-                    </div>
-                    <p>nice game! deer developer, kys pls.</p>
-                </div>
-                <div class="card">
-                    <div class="person">
-                        <img class="personImg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAMFBMVEXk5ueutLeor7La3d/n6erh4+SrsbXT1ti7wMPq7O2zubzKztDHy83Bxsi4vcDd4OHJo5BXAAAFEElEQVR4nO2cXZucIAxGUQIoCv7/f1t02t35XoHXSdxyrtq9mvMAgUSIUo1Go9FoNBqNRqPRaDQajUaj0Wg0Go2GbIj7ByCghFk2jFn/w/2Dikke2k1zGDZCmCenzTl9yLh5iN5e4+MQ3Ol8aNQh+s7a7o5NyJ1Jh0a3mtyL/PPpungenVH7Fx7fRD2eQYeW4dWYXNMPywls3Mv5dTfb+on7p/4ALaHfpXKCwSHt97skm07LtaG9U+xrqnWO+ze/ZMoyuehIXTgFLgmZNmUuIm2o1EWgTVr75ThZMS3F5Lw4doMXtt9k7JWP9AP3z7/B1bgkG0nLRleprDZyJhrFigWzYaMUGaqcZNvQSIloVK2S8NwWF2iqnWQbk4yhQaikoTHcHgo2MDKGhn6uXuzCRm6TykPZLfwBjQaUiw3sMiaiZLqomV2As4x/nlEAxbKEnXldlNlVvtwpMyysLrSjrLwfz1tGq8j8n8G7aGDb/wZzEc0A1/+607Cez/Z9vtgtwxoBSFfnmDdEzgiADWYJVhmHlbGc4Qx6mOmYKwHkoEuGWwbqkmT4XA4YmV8l09YMSuZXhebftGlWfWN6hDehwR40u8iaaoJTgIG3RIuVmVll0Jkmb9qMDWfMhTONK2gy52ZqLTUD62a8JYAkM8NcuJcMNnH23LVmpXCfNJh3GQWdZzP7wNCCcmGuNF9sUPOM/8PZGgJAwZl/+av15gzExUtwSXlA/dWZFMsErJiVEXEKiCO3xj8At5q4Fb6gqdbGTmIGRqnKUoAVsvov1J7QuK8z3FJXdJZ033SlohhgA/ePv6e86MR9l+EZS+HnTRvlXAP+ZikKAlba3fkLZEpc5L7UypfxRqqLotzNM0p+SUsh4wmdFZGPvYHc7uzGRhHp2DtomXcNThoWkWHsHjc8Pp2/V7GD3BeaN5BxQ/9Ox/aDkxvF7kk6oX/hY3sbNHu5L5PFxUcf2/dxkncU2wEpF5JQ/7eBRvpXF040vR6gcVTaTStOm/EU3RneQpSUxnP3nFHKrCxXbH8w6jxe6y9NCtpd2udE/9V5xvu4ttKZnNN6ka+09TJKFmGI23p/1namX//uY1gX0SLViLZmRnOI3j6ReCbV+SEN06LE+RAlkWGbUj953Ch16xhpST40LlMSyeyfcSPklIiKJo1m8s+6MuUIpYwzOPZNiEYN+0DrZ8PpQ2buEN9m/pIO03zVDZNOxjiVi07kSXP0+5yllN67D+cHpHQ4RGXTie6jSYLel+eXknLqT9UHSM/Ya6ZPbLrPlAhITdgHQK90wvGRbdTx0Bl2peOnY085RIfPsCub7tCPHbQgLzHu0TnuOl12LzaATjimbS2pGbzf76E/5hJqTutCIEd02iMdWVy6Axo5kftcFHu0maELh2Hp39ggwwCzCzSowd8vMdoIcIHZoJ9iFQLpFkKl10jQIF4KmIFrf7kH8O6R4wzzHFt9JR38RLaKyg6VVN2GEUpf9fQB+W4JQV8x0eqv+KKpuWUra1y69QRdagO5Fo+msD4Ie0uCxA5lH3LGz1Yv9lK0daKbfYAo61Jb3x33GEoeQIo4+D+j6H469HE8koIjGvQFNpbsvQbcHw9J/ktbbD8JMJkhgATPsuyqILrVD5TsvgHizsvXZMYzZONSPHnVAHivPyx5i0bkgfmbzEUD6PR/IJk7DbQ3Dp6YIyN6y1zJyTfN0Msm68WtFs7ZHkY0Go1Go9Fo/H/8AVoJTYWJQwYkAAAAAElFTkSuQmCC" alt="">
-                        <h6>Dege Nerat</h6>
-                    </div>
-                    <p>I've grinded soviets for 10 years and finally unlocked 7th rank.</p>
-                </div>
-            </div>
-        </section>
-        <section class="features">
-            <h3 class="padText">Features</h3>
-            <hr class="secLine">
-            <ul class="features-list">
-                <li>Unrealistic damage model</li>
-                <li>In-game vehicle museum with more than thousand models of technics</li>
-                <li>Ancient graphics from 2012</li>
-                <li>Unprofessional map design</li>
-                <li>Lack of diverse updates</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <div class="contacts"></div>
-            <h3 class="padText">Contacts</h3>
-            <hr class="secLine">
-            <p>pu-pu-pu</p>
-            <p>ta-ta-ta</p>
-        <div class="links"></div>
-            <h3 class="padText">Social links:</h3>
-            <hr class="secLine">
-            <a href="">Odnoklasniki</a>
-            <a href="">Spherum</a>
-    </footer>
+    </div>
 </body>
+
 </html>

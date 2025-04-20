@@ -8,6 +8,10 @@ html{
 body{
     margin: 0;
 }
+header{
+    width: 100vw;
+    height: 100vh;
+}
 h6{
     margin: 0;
     padding: 0;
@@ -21,6 +25,10 @@ li{
     list-style-type: none;
     padding: 10px;
     font-size: 50%;
+    transition-duration: 0.2s;
+}
+li:hover{
+    scale: 1.1;
 }
 li:before{
     color: var(--secColor);
@@ -32,6 +40,8 @@ li:before{
     height: 100vh;
 }
 .background{
+    z-index: -1;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +59,11 @@ li:before{
     width: 90vw;
     border-radius: 2vw;
     margin: 1vw;
-    margin-left:5vw
+    margin-left: 5vw;
+    transition-duration: 0.2s;
+}
+.gameImg:hover{
+    scale: 1.05;
 }
 .secLine{
     background-color: var(--secColor);
@@ -61,6 +75,29 @@ li:before{
     border-radius: 2px;
     border:none;
 }
+.linkText{
+    text-decoration: none;
+    color: black;
+}
+.listborder{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    padding-left: 2vh;
+    gap: 1vw;
+    margin: 0;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 8vh;
+    /* border-left: 3px solid var(--secColor);
+    border-radius: 15px; */
+    width: fit-content;
+    transition-duration: 0.2s;
+}
+.listborder:hover{
+    scale: 1.2;
+}
 .padText{
     margin: 0;
     margin-top: 1vh;
@@ -71,12 +108,23 @@ li:before{
     display: flex;
     width: 50vw;
     height: 40vh;
+    gap: 1vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 10px solid rgb(233, 62, 32);
     background-color: rgba(231, 72, 44, 0.4);
     border-radius: 2vw;
+    transition-duration: 0.2s;
+}
+.content:hover{
+    scale: 1.05;
+}
+.head-text{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cards-container{
     display: flex;
@@ -95,6 +143,10 @@ li:before{
     flex-direction: column;
     border-left: 3px solid var(--secColor);
     border-radius: 15px;
+    transition-duration: 0.2s;
+}
+.card:hover{
+    scale: 1.1;
 }
 .person{
     margin: 0;
@@ -106,6 +158,14 @@ li:before{
 .personImg{
     width: 2em;
     height: 2em;
+    transition-duration: 0.2s;
+}
+.personImg:hover{
+    scale: 1.05;
+}
+.logoImg{
+    width: 1em;
+    height: 1em;
 }
 .features-list{
     display: flex;
