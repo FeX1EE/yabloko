@@ -36,3 +36,26 @@ gsap.utils.toArray("section").forEach(section => {
         }}
     )
 })
+function initPlayer(){
+    const btn = document.querySelector(".playButton")
+    const audio = document.getElementsByClassName(".audioPlayer")
+    document.addEventListener("click",() => {
+        if (audio.paused){
+            audio.play()
+            // btn.innerHTML=""
+        }
+        else{
+            audio.pause()
+            // btn.innerHTML=""
+        }
+    })
+    const time = document.querySelector(".musTime")
+    let Mmins = Math.floor(audio.duration/60)
+    let Msecs = Math.floor(audio.duration%60).toString().padStart(2,'0')
+    audio.addEventListener("timeupdate",() => {
+        let mins = Math.floor(audio.currentTime/60)
+        let secs = Math.floor(audio.currentTime%60).toString().padStart(2,'0')
+        time.innerHTML = `${mins}:${secs} / ${Mmins}:${Msecs}`
+    })
+}
+document.addEventListener("DOMContentLoaded", initPlayer)

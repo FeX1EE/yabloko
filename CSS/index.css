@@ -1,6 +1,7 @@
 :root{
     --secColor: rgb(235, 200, 0);
     --bgColor: rgba(0, 80, 0, 0.6);
+    --backColor: rgba(50, 50, 50, 0.8);
 }
 html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -201,4 +202,74 @@ li:before{
     perspective: 1000px;
     overflow: hidden;
 
+}
+.playerEl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.backRect{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3vw;
+    width: 70vw;
+    height: 60vh;
+    background-color: lightgray;
+    border-radius: 2em;
+}
+.circle{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 13vw;
+    background-color: blue;
+}
+.musPrd{
+    color: var(--backColor);
+}
+.playButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7vw;
+    height: 7vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    border: 2px solid black;
+    border-radius: 4vw;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: 2vw solid transparent;
+    border-bottom: 2vw solid transparent;
+    border-left: 3.3vw solid black;
+    margin-left: 0.5vw;
+}
+.rect{
+    background-color: black;
+    margin: 0.65vw;
+    width: 1vw;
+    height: 4vw;
+    
+    
+}
+.musProg{
+    background-color: var(--secColor);
+    border: 1px solid black;
+    border-radius: 1vw;
+    width: 25vw;
+    height: 0.5vw;
+}
+.musTime{
+    margin-top: 2vw;
+    color: var(--backColor);
+}
+.infoCont{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10vw;
 }
