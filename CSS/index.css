@@ -256,13 +256,23 @@ li:before{
     
 }
 .musProg{
-    background-color: var(--secColor);
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    background-color: var(--backColor);
     border-radius: 1vw;
     width: 25vw;
     height: 0.5vw;
 }
+.Prog{
+    background-color: var(--secColor);
+    border: 1px solid black;
+    border-radius: 1vw;
+    width: 1%;
+    height: 0.5vw;
+    pointer-events: none
+}
 .musTime{
+    user-select: none;
     margin-top: 2vw;
     color: var(--backColor);
 }
